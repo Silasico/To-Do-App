@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>To Do List App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="refresh" content="text/html;charset=UTF-8" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json" />
+    <meta property="og:title" content="To-Do App" /><meta property="og:description" content="A To-Do List App created by Silasico" />
+    <meta property="og:image" content="https://silasico.github.io/ToDo-List/screenshot1.jpg" itemprop="image" />
+    <meta property="og:image:width" content="222" />
+    <meta property="og:image:height" content="222" />
+</head>
+<body>
+    <section id="app">
+        <div class="head">
+            <h1>T O D O</h1>
+            <div class="toggle-mode">
+                <i class="fa-solid fa-sun"></i>
+
+            </div>
+        </div>
+        <div class="create">
+            <p>
+                Add New Task
+            </p>
+            <div class="add">
+                <input type="text" name="input" id="input" value="" placeholder="Enter a new todo-item" class="input-here" />
+                <input type="datetime-local" name="date" id="date" class="time" value="" />
+                <button class="add-btn">Add To Do</button>
+            </div>
+            <div class="error"></div>
+        </div>
+        <div class="todo">
+            <ul>
+
+            </ul>
+            <div class="footer">
+                <p class="remainder">
+
+                </p>
+                <p class="clear">
+                    Clear Completed
+                </p>
+            </div>
+        </div>
+
+        <div class="nav-menu">
+            <p class="nav-item all-item active">
+                All
+            </p>
+            <p class="nav-item all-item">
+                Completed
+            </p>
+            <p class="nav-item all-item">
+                Remainder
+            </p>
+
+        </div>
+        <div class="app-footer">
+            Created By <a href="https://wa.me/2348161299594" target="_blank">Silasico</a>
+        </div>
+    </section>
+
+    <script>
+    window.addEventListener("load", () => {
+        if("serviceWorker" in navigator) {
+            navigator.serviceWorker.register ("service-worker.js").then(() => {
+                
+            }).catch(e => {
+                console.log(e)
+            })
+        }
+    })
+        
+    </script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
